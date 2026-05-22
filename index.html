@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA Plano de Negócios</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== TELA 1: SELEÇÃO DE MODO ===== -->
+  <section id="tela-modo">
+    <div class="modo-container">
+      <h1>IA Plano de Negócios</h1>
+      <p class="subtitulo">Como você está chegando hoje?</p>
+
+      <div class="modo-cards">
+        <div class="card-modo" id="btn-organizador">
+          <h2>📋 Modo Organizador</h2>
+          <p>Já sei o que quero. Preciso estruturar e validar minha ideia.</p>
+        </div>
+        <div class="card-modo" id="btn-provocador">
+          <h2>💡 Modo Provocador</h2>
+          <p>Tenho apenas uma ideia. Quero ser guiado com referências e opções.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TELA 2: CHAT ===== -->
+  <section id="tela-chat" class="oculto">
+    <div class="chat-header">
+      <span id="modo-badge"></span>
+      <h2>Orquestrador de Planos de Negócios</h2>
+    </div>
+
+    <div id="chat-mensagens"></div>
+
+    <div class="chat-input-area">
+      <input
+        type="text"
+        id="input-usuario"
+        placeholder="Digite sua resposta..."
+        autocomplete="off"
+      />
+      <button id="btn-enviar">Enviar</button>
+    </div>
+  </section>
+
+  <!-- ===== TELA 3: PAINEL FINANCEIRO ===== -->
+  <section id="tela-painel" class="oculto">
+    <div class="painel-header">
+      <h2>📊 Painel de Gestão Interativo</h2>
+      <button id="btn-gerar-pdf">Gerar PDF</button>
+    </div>
+
+    <div class="painel-inputs">
+      <h3>Seus Dados</h3>
+      <label>Investimento Inicial (R$)
+        <input type="number" id="input-investimento" />
+      </label>
+      <label>Custo Fixo Mensal (R$)
+        <input type="number" id="input-custo-fixo" />
+      </label>
+      <label>Preço de Venda por Unidade (R$)
+        <input type="number" id="input-preco" />
+      </label>
+      <label>Custo Variável por Unidade (R$)
+        <input type="number" id="input-custo-variavel" />
+      </label>
+      <label>Volume Mensal Estimado (unidades)
+        <input type="number" id="input-volume" />
+      </label>
+    </div>
+
+    <div class="painel-metricas">
+      <h3>Métricas de Viabilidade</h3>
+      <div class="metrica">
+        <span>Margem de Contribuição</span>
+        <strong id="result-margem">R$ —</strong>
+      </div>
+      <div class="metrica">
+        <span>Lucro Mensal Estimado</span>
+        <strong id="result-lucro">R$ —</strong>
+      </div>
+      <div class="metrica">
+        <span>Ponto de Equilíbrio</span>
+        <strong id="result-pe">— unidades/mês</strong>
+      </div>
+      <div class="metrica">
+        <span>Payback</span>
+        <strong id="result-payback">— meses</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="js/parser.js"></script>
+  <script src="js/painel.js"></script>
+  <script src="js/pdf.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

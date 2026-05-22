@@ -1,0 +1,10 @@
+Margem de Contribuição   = Preço de Venda − Custo Variável
+
+Lucro Mensal Estimado    = (Margem de Contribuição × Volume Mensal)
+                           − Custo Fixo Mensal
+
+Ponto de Equilíbrio      = Custo Fixo Mensal ÷ Margem de Contribuição
+(em unidades/mês)
+
+Payback                  = Investimento Inicial ÷ Lucro Mensal Estimado
+(em meses)
